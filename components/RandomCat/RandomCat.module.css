@@ -1,0 +1,40 @@
+.loading {
+    color: #fff;
+    text-align: center;
+}
+
+.random-cat {
+    margin: 0 auto;
+    width: 400px;
+}
+
+.fav-btn {
+    background-color: tomato;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-right: 1rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.generate-btn {
+    background-color: #F25912;
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.add-fav, .remove-fav {
+    color: #fff;
+    cursor: pointer;
+    margin-right: 1rem;
+    font-size: 2rem;
+}

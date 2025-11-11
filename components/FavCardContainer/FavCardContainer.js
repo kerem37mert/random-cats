@@ -1,0 +1,26 @@
+"use client";
+
+import useLocalStorage from "@/hooks/useLocalStorage";
+import classes from "./FavCardContainer.module.css";
+import FavCard from "../FavCard/FavCard";
+
+export default function FavCardContainer() {
+
+    const { value, setValue } = useLocalStorage("favs", []);
+
+    return(
+        <div className={ classes["fav-card-container"] }>
+            { 
+                value.length ? (
+                    value.map(item => (
+                        <FavCard key={ item } id={ item } />
+                    )) 
+                ) : (
+                    <div className={ classes["not-found"] }>
+                        Hiç Favori Kedin Yok
+                    </div>
+                )
+            }
+        </div>
+    )
+}

@@ -15,8 +15,8 @@ export default function RandomCat() {
         setValue([...value, item]);
     }
 
-    function removeFav() {
-        setValue(prev => prev.slice(0, -1));
+    function removeFav(id) {
+        setValue(prev => prev.filter(item => item !== id));
     }
     
     const { data, error, isLoading, fetchData } = useFetch();
@@ -43,7 +43,7 @@ export default function RandomCat() {
            <div className={ classes.footer }>
                 {
                     value.includes(data[0].id) ? (
-                        <FaHeart className={ classes["remove-fav"] } onClick={ removeFav } />
+                        <FaHeart className={ classes["remove-fav"] } onClick={ () => removeFav(data[0].id) } />
                     ) : (
                         <FaRegHeart className={ classes["add-fav"] } onClick={ () => addFav(data[0].id) } />
                     )

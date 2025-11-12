@@ -18,7 +18,7 @@ export default function Header() {
                         <Link href="/favs" className={ classes.link }>Favori Kediler</Link>
                     </li>
                     <li>
-                        <Link href="/" className={ classes.link }>Hakkımızda</Link>
+                        <Link href="/about" className={ classes.link }>Hakkımızda</Link>
                     </li>
                 </ul>
             </nav>

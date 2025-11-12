@@ -1,3 +1,9 @@
 .fav-card {
     text-align: center;
 }
+
+.remove {
+    font-size: 2rem;
+    color: #F25912;
+    cursor: pointer;
+}

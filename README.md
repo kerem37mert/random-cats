@@ -1,5 +1,5 @@
 # Random Cats
-![alt text](assets/image.png)
+![Random Cats](assets/image.png)
 
 ## Getting Started
 

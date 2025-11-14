@@ -11,7 +11,7 @@ export default function useFetch() {
         setError(undefined);
 
         try {
-            const response = await fetch(`https://api.thecatapi.com/v1/images/search?api_key=${process.env.API_KEY}`);
+            const response = await fetch(`https://api.thecatapi.com/v1/images/search?api_key=${process.env.NEXT_PUBLIC_API_KEY}`);
             const data = await response.json();
             if (!response.ok) {
                 throw new Error('Failed to fetch data');

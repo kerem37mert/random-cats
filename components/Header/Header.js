@@ -7,7 +7,7 @@ export default function Header() {
     return (
         <header className={ classes.header }>
             <Link href="/" className={ classes.logo }>
-                RANDOM CATS V2
+                Happy Kitty
             </Link>
             <nav className={ classes.nav }>
                 <ul>

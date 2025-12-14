@@ -2,6 +2,13 @@
     text-align: center;
 }
 
+.card-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
 .remove {
     font-size: 2rem;
     color: #F25912;

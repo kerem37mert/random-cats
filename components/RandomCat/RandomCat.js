@@ -18,38 +18,38 @@ export default function RandomCat() {
     function removeFav(id) {
         setValue(prev => prev.filter(item => item !== id));
     }
-    
+
     const { data, error, isLoading, fetchData } = useFetch();
 
-    if(isLoading) {
-       return (
-         <div className={ classes.loading }>Yükleniyor</div>
-       );
+    if (isLoading) {
+        return (
+            <div className={classes.loading}>Yükleniyor</div>
+        );
     }
 
-    if(error) {
+    if (error) {
         return (
-            <div>Bir hata oluştu: { error }</div>
+            <div>Bir hata oluştu: {error}</div>
         );
     }
 
     return (
-        <div className={ classes["random-cat"] }>
+        <div className={classes["random-cat"]}>
             {
                 data && (
-                     <Image src={ data[0].url } alt="keddy" width={ 400 } height={ 400 } />
+                    <Image src={data[0].url} alt="keddy" width={400} height={400} className={classes["cat-image"]} />
                 )
             }
-           <div className={ classes.footer }>
+            <div className={classes.footer}>
                 {
                     value.includes(data[0].id) ? (
-                        <FaHeart className={ classes["remove-fav"] } onClick={ () => removeFav(data[0].id) } />
+                        <FaHeart className={classes["remove-fav"]} onClick={() => removeFav(data[0].id)} />
                     ) : (
-                        <FaRegHeart className={ classes["add-fav"] } onClick={ () => addFav(data[0].id) } />
+                        <FaRegHeart className={classes["add-fav"]} onClick={() => addFav(data[0].id)} />
                     )
                 }
-                <button className={ classes["generate-btn"] } onClick={ fetchData }>Sonraki Kedi</button>
-           </div> 
+                <button className={classes["generate-btn"]} onClick={fetchData}>Sonraki Kedi</button>
+            </div>
         </div>
     );
 }

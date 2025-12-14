@@ -26,3 +26,9 @@ a {
 main {
   padding: 2rem 4rem;
 }
+
+@media (max-width: 768px) {
+  main {
+    padding: 2rem 1rem;
+  }
+}

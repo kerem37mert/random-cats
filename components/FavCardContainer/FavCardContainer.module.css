@@ -5,6 +5,24 @@
     gap: 16px;
 }
 
+@media (max-width: 1024px) {
+    .fav-card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .fav-card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .fav-card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 .not-found {
     color: #fff;
     text-align: center;

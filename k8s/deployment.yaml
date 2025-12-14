@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: randomcats
-          image: keremmert/randomcats:v2
+          image: keremmert/randomcats:v1
           ports:
             - containerPort: 3000
           resources:
